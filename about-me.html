@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Eduardo</title>
+  <link rel="stylesheet" href="style1.css">
+
+  <script>
+var estiloAct = 1;
+var styleSheetLink = document.querySelector("link[rel='stylesheet']");
+
+function cambiarEstilo1() {
+  styleSheetLink.href = "style1.css";
+  estiloAct = 1;
+}
+
+function cambiarEstilo2() {
+  styleSheetLink.href = "style2.css";
+  estiloAct = 2;
+}
+
+function alternarEstilo() {
+  if (estiloAct === 1) {
+    cambiarEstilo2();
+  } else {
+    cambiarEstilo1();
+  }
+}
+
+function mostrarOtroEstilo() {
+  if (estiloAct === 1) {
+    cambiarEstilo2();
+    estiloAct === 1
+  } else {
+    cambiarEstilo1();
+    estiloAct === 2
+  }
+}
+function restaurarEstilo() {
+  if (estiloAct === 1) {
+    cambiarEstilo2();
+    estiloAct === 1
+  } else {
+    cambiarEstilo1();
+    estiloAct === 2
+  }
+}
+
+  </script>
+</head>
+
+<body>
+<div class="rainbow-line"></div>
+
+<header>
+<h1>Hey, soy Eduardo</h1>
+<p>aka 270</p>
+<button class="button" onclick="cambiarEstilo1('style1')">Estilo 1</button>
+<button class="button" onclick="cambiarEstilo2('style2')">Estilo 2</button>
+<button class="button"  onclick="alternarEstilo()" onmouseover="mostrarOtroEstilo()" onmouseout="restaurarEstilo()">Alternar estilo</button>
+<button class="button" onmouseover="mostrarOtroEstilo()" onmouseout="restaurarEstilo()">Mostrar otro estilo</button>
+<br>
+<br>
+<a href="main.html">Página principal</a>
+</header>
+
+  <main>
+<div class="flex">
+    <div class="container" id="sobre-mi">
+      <h3 class="txt">Sobre mí</h3>
+      <p class="txt">
+        Tengo 17 años y me interesé en la informática desde pequeño, sobretodo en ordenadores y fue en 2019 cuando decidí aprender sobre estos y a cómo montarlos. Me hice un ordenador y en mitad de la pandemia me salió un video enseñando como usar hacks(trampas) gratuitos en el videojuego Counter-Strike:Global Offensive. Aquí es cuando descubrí lo complejo que podría ser el "game hacking" y la manipulación de la memoria del juego. A futuro mi intención es aprender a usar C++ para modificar la memoria de los juegos.
+      </p>
+      <br>
+      <video class="video" width="640" autoplay muted loop>
+         <source src="hvh.mp4" type="video/mp4">
+      </video>
+   </div>
+  </main>
+
+</body>
+</html>

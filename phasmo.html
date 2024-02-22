@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo con tablas, listas y columnas</title>
+  <link rel="stylesheet" href="style1.css">
+
+  <script>
+    var estiloAct = 1;
+    var styleSheetLink = document.querySelector("link[rel='stylesheet']");
+    
+    function cambiarEstilo1() {
+      styleSheetLink.href = "style1.css";
+      estiloAct = 1;
+    }
+    
+    function cambiarEstilo2() {
+      styleSheetLink.href = "style2.css";
+      estiloAct = 2;
+    }
+    
+    function alternarEstilo() {
+      if (estiloAct === 1) {
+        cambiarEstilo2();
+      } else {
+        cambiarEstilo1();
+      }
+    }
+    
+    function mostrarOtroEstilo() {
+      if (estiloAct === 1) {
+        cambiarEstilo2();
+      } else {
+        cambiarEstilo1();
+      }
+    }
+    function restaurarEstilo() {
+      if (estiloAct === 1) {
+        cambiarEstilo2();
+      } else {
+        cambiarEstilo1();
+      }
+    }
+    
+      </script>
+</head>
+<body>
+
+  <div class="rainbow-line"></div>
+
+  <header>
+    <h1>Phasmophobia</h1>
+    <div class="flex">
+        <p class="txt">
+        Phasmophobia es un videojuego de terror independiente desarrollado y publicado por Kinetic Games. El juego contó con un acceso anticipado a través de Steam para los equipos de Microsoft Windows en septiembre de 2020, junto con soporte de realidad virtual. Recibió una gran afluencia de popularidad el mes siguiente debido a que muchos streamers de Twitch y YouTuber lo jugaron, principalmente en las semanas y días previos a Halloween.​ El 15 de octubre de 2020, el juego era el sexto más popular en Twitch.​ Fue el juego más vendido en Steam a nivel mundial durante varias semanas de octubre a noviembre de 2020.
+        </p>
+    </div>
+    <br>
+    <button onclick="cambiarEstilo1('style1')">Estilo 1</button>
+    <button onclick="cambiarEstilo2('style2')">Estilo 2</button>
+    <button onclick="alternarEstilo()">Alternar estilo</button>
+    <button onmouseover="mostrarOtroEstilo()" onmouseout="restaurarEstilo()">Mostrar otro estilo</button>
+  </header>
+
+  <main class="txt">
+    <center>
+    <h2>Equipamiento</h2>
+    <table>
+        <tr>
+          <th>Nombre</th>
+          <th>Unidades máximas</th>
+          <th>Función</th>
+        </tr>
+      <tbody>
+        <tr>
+          <td>Proyector D.O.T.S.</td>
+          <td class="align-center">2</td>
+          <td>Crea un campo de luces verdes cuando se coloca. Se utiliza para detectar evidencias de proyectores D.O.T.S.</td>
+        </tr>
+        <tr>
+          <td>Detector EMF</td>
+          <td class="align-center">2</td>
+          <td>Puede detectar la presencia de campos electromagnéticos en el área. Se utiliza para obtener evidencia de EMF Nivel 5</td>
+        </tr>
+        <tr>
+          <td>Libro de escritura fantasmal</td>
+          <td class="align-center">2</td>
+          <td>Se usa para obtener escritura fantasma de un fantasma</td>
+        </tr>
+        <tr>
+            <td>Spirit Box</td>
+            <td class="align-center">2</td>
+            <td>Se utiliza para comunicarse con un fantasma a través de preguntas</td>
+          </tr>
+          <tr>
+            <td>Termómetro</td>
+            <td class="align-center">2</td>
+            <td>Muestra la temperatura local de una habitación. Se puede utilizar para detectar temperaturas bajo cero.</td>
+          </tr>
+          <td>Termómetro</td>
+          <td class="align-center">2</td>
+          <td>Muestra la temperatura local de una habitación. Se puede utilizar para detectar temperaturas bajo cero</td>
+        </tr>
+        <td>Luz ultravioleta</td>
+        <td class="align-center">2</td>
+        <td>Se utiliza para revelar huellas dactilares y huellas creadas por fantasmas</td>
+        </tr>
+        <td>Cámara de video</td>
+        <td class="align-center">4</td>
+        <td>Crea una transmisión de vídeo, que se transmite al ordenador de la furgoneta. Se usa para detectar orbes fantasmales</td>
+        </tr>
+        <td>Linterna</td>
+        <td class="align-center">4</td>
+        <td>Proporciona una fuente de luz</td>
+        </tr>
+      </tbody>
+    </table>
+<br>
+<br>
+  <iframe
+    title="Phasmophobia"
+    width="300"
+    height="200"
+    src="https://store.steampowered.com/widget/739630/?utm_source=homepage&utm_campaign=mycampaign">
+  </iframe>
+<br>
+<br>
+<a href="main.html">Página principal</a>
+</center>
+</main>
+
+</body>
+</html>

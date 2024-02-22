@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>270</title>
+<link rel="icon" type="image/x-icon" href="icon.webp">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body{
+      overflow: hidden;
+      background-color: black;
+    }
+
+.bg-block {
+  display: block;
+}
+
+@media (min-width: 360px) {
+  .bg-block {
+  display: block;
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #5efff7, 0 0 20px #5efff7, 0 0 30px #7A9DC5, 0 0 40px #7A9DC5, 0 0 50px #7A9DC5, 0 0 60px #7A9DC5, 0 0 70px #7A9DC5;
+  }
+  to {
+    text-shadow: 0 0 20px #5efff7, 0 0 30px #7A9DC5, 0 0 40px #7A9DC5, 0 0 50px #7A9DC5, 0 0 60px #7A9DC5, 0 0 70px #7A9DC5, 0 0 80px #7A9DC5;
+  }
+}
+
+.Flicker {-webkit-animation:Flikerr 1s infinite;
+    animation:Flicker 1.8s infinite, glow 1s ease-in-out infinite alternate;
+    margin-left:1px}@-webkit-keyframes
+    Flicker{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes Flicker{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+.bgcenter {
+    border: 0px transparent;
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.absolute {
+    position:absolute;
+}
+
+.relative {
+    position: relative;  
+}
+
+.center {
+    border: 5px transparent;
+    display: flex;
+    position: absolute;
+    text-align:center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center2 {
+    border: 5px transparent;
+    display: flex;
+    position: absolute;
+    text-align:center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center3 {
+    border: 5px transparent;
+    display: flex;
+    position: absolute;
+    text-align:center;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.txt-color {
+    color:#5efff7;
+    font-family:Verdana, Geneva, Tahoma, sans-serif,;
+    font-size: 650%;
+}
+
+.button {
+  align-items: center;
+  background-image: linear-gradient(144deg,#366bac, #2C5E99 50%, #00bac7);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:active,
+.button:hover {
+  outline: 0;
+}
+
+.button span {
+  background-color: rgb(5, 6, 45);
+  padding: 8px 22px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+</style>
+</head>
+
+    
+<center>
+<body>
+  <div>
+    <img class="bgcenter bg-block" src="bg.gif">
+  </div>
+
+  <div class="center Flicker txt-color">270</div>
+  <button class="button center2" role="button" onclick="location.href='about-me.html'"><span class="text">Acerca de mi</span></button>
+  <button class="button center3" role="button" onclick="location.href='phasmo.html'"><span class="text">Phasmophobia</span></button>
+</body>
+</center>
+</html>
